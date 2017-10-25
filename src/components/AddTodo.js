@@ -15,6 +15,10 @@ class AddTodo extends React.Component {
         this.state = {}
     }
 
+    /**
+     * 输入完成保存数据到store
+     * @param event
+     */
     addTodoHanderKeyUp(event) {
         if (event.keyCode === 13 && event.target.value !== "") {
             this.props.addTodo(event.target.value);

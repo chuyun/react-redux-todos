@@ -29,6 +29,9 @@ export default class Footer extends React.Component {
         })
     }
 
+    /**
+     * CheckBox 选中处理
+     */
     handleCheckBox() {
         this.props.Checked(!this.state.isAllChecked);
         this.setState({
@@ -36,12 +39,16 @@ export default class Footer extends React.Component {
         });
     }
 
+    /**
+     * 删除数据确认
+     */
     confirm = () => {
         let hasCheckedItem = false;
         this.props.todoLists.map((item) => {
             if (item.completed) {
                 hasCheckedItem = true
             }
+            return item;
         });
         if (hasCheckedItem) {
             this.props.deleteChecked();
@@ -57,7 +64,6 @@ export default class Footer extends React.Component {
 
 
     render() {
-        console.log(this.props.isAllChecked);
         return (
             <div className='footer'>
                 {this.props.todoLists.length ? `已完成: ${this.props.todoLists.filter((item) => item.completed === true).length} / ${this.props.todoLists.length}` : ``}
@@ -82,6 +88,5 @@ export default class Footer extends React.Component {
                 </Popconfirm>
             </div>
         )
-
     }
 }

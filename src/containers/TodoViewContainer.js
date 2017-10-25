@@ -1,16 +1,10 @@
 /**
  * Created by jun on 2017/10/20.
  */
-
-/**
- * Created by jun on 2017/10/20.
- */
-
 import React from 'react';
 import {connect} from 'react-redux'
 import TodoView from '../components/TodoView';
-import {addTodo, deleteTodo, editTodo,checked} from "../actions/";
-import {Message} from 'antd'
+import { deleteTodo, editTodo,checked} from "../actions/";
 
 class TodoViewContainer extends React.Component {
     constructor(props) {

@@ -1,10 +1,11 @@
-//action creators
+/**
+ * action creators
+ */
 import * as ActionTypes from '../constants/ActionTypes';
 
 export const initTodoLists = (todoLists) => {
     return {type: ActionTypes.INIT_TODOS, todoLists}
 };
-
 
 export const addTodo = (todo) => {
     return {type: ActionTypes.ADD_TODO, todo}

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './App.css';
 import AddTodoContainer from './containers/AddTodoContainer';
 import FooterContainer from './containers/FooterContainer';
 import TodoViewContainer from './containers/TodoViewContainer';

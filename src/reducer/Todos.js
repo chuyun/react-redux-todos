@@ -56,14 +56,9 @@ export default function (state, action) {
         case ActionTypes.DELETE_CHECKED:
             return {
                 isAllChecked: state.isAllChecked,
-                todoLists: state.todoLists.filter((item) => {
-                    if (!item.completed) {
-                        return item
-                    }
-                })
+                todoLists: state.todoLists.filter((item) =>!item.completed)
             };
         default:
             return state
-
     }
 }
